@@ -11,7 +11,23 @@ public class ListIterator2<E> implements ListIterator<E>{
 	public ListIterator2(List1<E> l)
 	{
 		list = l;
+		previous = l.head.previous;
 		next = l.head;
+	}
+	
+	public ListIterator2(List1<E> l, int index)
+	{
+		list = l;
+		if(index == 0)
+		{
+			previous = null;
+			next = l.head;
+		}
+		else
+		{
+			previous = l.head;
+			next = l.head.next;
+		}
 	}
 	
 	public ListIterator2(Node head)
