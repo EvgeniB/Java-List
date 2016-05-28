@@ -11,6 +11,14 @@ public class List1<E> implements List<E>{
 	Node head = null;
 	int size = 0;
 	
+	public Node getHead(){
+		return head;
+	}
+	
+	public int getSize(){
+		return size;
+	}
+	
 	public List1()
 	{
 		
@@ -34,11 +42,8 @@ public class List1<E> implements List<E>{
 		while(current.next != null){
 			current = current.next;
 		}
-		Node previous = head;
-		while(previous.next.next != null){
-			previous = previous.next;
-		}
-		current.next = new Node(arg0, previous.next, null);
+		current.next = new Node(arg0, 
+				current, null);
 		return true;
 	}
 
