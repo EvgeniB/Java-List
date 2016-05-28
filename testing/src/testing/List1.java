@@ -11,6 +11,7 @@ public class List1<E> implements List<E>{
 	Node head = null;
 	int size = 0;
 	
+<<<<<<< HEAD
 	public Node getHead(){
 		return head;
 	}
@@ -19,6 +20,8 @@ public class List1<E> implements List<E>{
 		return size;
 	}
 	
+=======
+>>>>>>> refs/remotes/origin/master
 	public List1()
 	{
 		
